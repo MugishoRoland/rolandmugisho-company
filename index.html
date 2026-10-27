@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RolandMugisho Company – Produits informatiques</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#12263F;--paper:#F7F8FA;--card:#FFFFFF;--accent:#F2A33A;--slate:#55657A;--line:#DDE3EA;--on-ink:#FFFFFF;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#0B1626;--paper:#101E33;--card:#162842;--slate:#A9B7C8;--line:#243A58}}
+:root[data-theme="dark"]{--ink:#0B1626;--paper:#101E33;--card:#162842;--slate:#A9B7C8;--line:#243A58}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,system-ui,sans-serif;line-height:1.6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body{color:#EAF0F7}}
+:root[data-theme="dark"] body{color:#EAF0F7}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.05rem;text-decoration:none;color:inherit}
+.brand svg{width:44px;height:44px}
+nav a{color:var(--slate);text-decoration:none;font-weight:600;margin-left:18px}
+nav a:hover,nav a:focus-visible{color:var(--accent)}
+.hero{background:var(--ink);color:var(--on-ink);border-radius:18px;padding:56px 28px;margin-top:8px}
+.hero h1{font-size:clamp(1.9rem,6vw,3.1rem);line-height:1.12;margin:0 0 16px;font-weight:800;max-width:15em}
+.hero p{max-width:34em;margin:0 0 28px;color:#C9D4E2;font-size:1.05rem}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:800;text-decoration:none}
+.btn.main{background:var(--accent);color:#12263F}
+.btn.alt{border:2px solid #4A6182;color:#fff}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+section{padding:56px 0 0}
+h2{font-size:1.6rem;margin:0 0 20px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+.item h3{margin:0 0 6px;font-size:1.05rem}
+.ico{width:44px;height:44px;margin-bottom:12px;color:var(--accent)}
+.item p{margin:0;color:var(--slate);font-size:.95rem}
+.contact{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:12px;padding:26px}
+.contact p{margin:0 0 10px}
+.contact a{color:inherit;font-weight:800}
+.photo{aspect-ratio:4/3;border:2px dashed var(--line);border-radius:10px;display:grid;place-items:center;color:var(--slate);margin-bottom:12px;font-size:.9rem;background:var(--paper)}
+img.photo{display:block;width:100%;height:auto;object-fit:contain;background:#fff;border:1px solid var(--line);border-style:solid}
+.small{padding:10px 16px;margin-top:14px;font-size:.95rem}
+.chat label{display:block;font-weight:600;margin:0 0 14px}
+.chat input,.chat textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:inherit;font:inherit;margin-top:4px}
+footer{padding:40px 0 28px;color:var(--slate);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<a class="brand" href="#top" aria-label="RolandMugisho Company">
+<svg viewBox="0 0 64 64" role="img" aria-label="Logo RolandMugisho Company">
+<rect width="64" height="64" rx="14" fill="#12263F"/>
+<path d="M14 46V18h13a8 8 0 0 1 0 16H14m13 0 10 12" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M38 46V28l8 10 8-10v18" fill="none" stroke="#F2A33A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="54" cy="14" r="3.5" fill="#F2A33A"/>
+</svg>
+<span>RolandMugisho Company</span>
+</a>
+<nav><a href="#vitrine">Vitrine</a><a href="#chat">Discuter</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main id="top">
+<div class="hero">
+<h1>Le matériel informatique qu’il vous faut, au bon endroit.</h1>
+<p>RolandMugisho Company vend des produits informatiques pour les particuliers, les écoles et les entreprises. Dites-nous votre besoin, nous vous conseillons.</p>
+<div class="btns">
+<a class="btn main" href="https://wa.me/243978112663">Écrire sur WhatsApp</a>
+<a class="btn alt" href="tel:+243978112663">Appeler</a>
+</div>
+</div>
+
+<section id="produits">
+<h2>Nos produits</h2>
+<div class="grid">
+<div class="item"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5h14v10H5zM2 19h20"/></svg><h3>Ordinateurs</h3><p>Portables et ordinateurs de bureau pour le travail, les études et la maison.</p></div>
+<div class="item"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="5"/><path d="M12 3v6"/></svg><h3>Accessoires</h3><p>Claviers, souris, casques, câbles et sacoches.</p></div>
+<div class="item"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="9" width="10" height="12" rx="1.5"/><path d="M9.5 9V3h5v6"/></svg><h3>Stockage</h3><p>Clés USB, disques durs et cartes mémoire.</p></div>
+<div class="item"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9V3h10v6M7 17H4V9h16v8h-3"/><rect x="7" y="14" width="10" height="7"/></svg><h3>Imprimantes</h3><p>Imprimantes, encre et consommables.</p></div>
+</div>
+</section>
+
+<section id="vitrine">
+<h2>Vitrine</h2>
+<div class="grid" id="vitrine-grid"></div>
+</section>
+
+<section id="chat">
+<h2>Discuter avec nous</h2>
+<div class="contact chat">
+<p>Écrivez votre message ici. Il s’ouvrira dans WhatsApp, prêt à être envoyé.</p>
+<label>Votre nom<input id="cn" type="text" autocomplete="name"></label>
+<label>Produit qui vous intéresse<input id="cp" type="text"></label>
+<label>Votre message<textarea id="cm" rows="4"></textarea></label>
+<a id="send" class="btn main" href="https://wa.me/243978112663">Envoyer sur WhatsApp</a>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="contact">
+<p>Téléphone et WhatsApp : <a href="tel:+243978112663">+243 978 112 663</a></p>
+<p>E-mail : <a href="mailto:mugishocirimwamiroland@gmail.com">mugishocirimwamiroland@gmail.com</a></p>
+</div>
+</section>
+</main>
+
+<footer>© 2026 RolandMugisho Company. Vente de produits informatiques.</footer>
+</div>
+<script>
+(function(){
+var n=document.getElementById('cn'),p=document.getElementById('cp'),m=document.getElementById('cm'),a=document.getElementById('send');
+function u(){var t='Bonjour, je m’appelle '+(n.value||'…')+'.'+(p.value?' Produit : '+p.value+'.':'')+' '+m.value;a.href='https://wa.me/243978112663?text='+encodeURIComponent(t.trim());}
+[n,p,m].forEach(function(e){e.addEventListener('input',u);});u();
+})();
+</script>
+<script src="produits.js"></script>
+<script>
+(function(){
+var g=document.getElementById('vitrine-grid');
+(window.PRODUITS||[]).forEach(function(p){
+var d=document.createElement('div');d.className='item';
+var ph;
+if(p.photo){ph=document.createElement('img');ph.className='photo';ph.src=p.photo;ph.alt=p.nom;ph.loading='lazy';}
+else{ph=document.createElement('div');ph.className='photo';ph.textContent='Photo à venir';}
+var t=document.createElement('h3');t.textContent=p.nom;
+var pr=document.createElement('p');pr.textContent=p.prix||'Prix sur demande';
+var l=document.createElement('a');l.className='btn main small';l.textContent='Commander';
+l.href='https://wa.me/243978112663?text='+encodeURIComponent('Bonjour, je suis intéressé par : '+p.nom+'.');
+d.append(ph,t,pr,l);g.appendChild(d);});
+})();
+</script>
+</body>
+</html>
