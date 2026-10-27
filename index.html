@@ -3,78 +3,104 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>RolandMugisho Company – Produits informatiques</title>
+<meta name="theme-color" content="#0D0D10">
+<meta name="description" content="Mugisho Roland Company : vente de produits informatiques. Ordinateurs, accessoires, stockage et imprimantes.">
+<title>Mugisho Roland Company – Produits informatiques</title>
+<link rel="icon" href="logo-icon.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#12263F;--paper:#F7F8FA;--card:#FFFFFF;--accent:#F2A33A;--slate:#55657A;--line:#DDE3EA;--on-ink:#FFFFFF;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#0B1626;--paper:#101E33;--card:#162842;--slate:#A9B7C8;--line:#243A58}}
-:root[data-theme="dark"]{--ink:#0B1626;--paper:#101E33;--card:#162842;--slate:#A9B7C8;--line:#243A58}
+:root{
+--black:#0D0D10;--char:#17171C;--card:#1D1D23;--line:#33322F;
+--gold:#D4A437;--gold-hi:#F1D58A;--gold-lo:#9C7416;
+--silver:#C7CAD1;--ivory:#F5EFE3;--mute:#A9A6A0;
+--grad:linear-gradient(135deg,#F1D58A 0%,#D4A437 48%,#9C7416 100%);
+}
 *{box-sizing:border-box}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,system-ui,sans-serif;line-height:1.6}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body{color:#EAF0F7}}
-:root[data-theme="dark"] body{color:#EAF0F7}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
-header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.05rem;text-decoration:none;color:inherit}
-.brand svg{width:44px;height:44px}
-nav a{color:var(--slate);text-decoration:none;font-weight:600;margin-left:18px}
-nav a:hover,nav a:focus-visible{color:var(--accent)}
-.hero{background:var(--ink);color:var(--on-ink);border-radius:18px;padding:56px 28px;margin-top:8px}
-.hero h1{font-size:clamp(1.9rem,6vw,3.1rem);line-height:1.12;margin:0 0 16px;font-weight:800;max-width:15em}
-.hero p{max-width:34em;margin:0 0 28px;color:#C9D4E2;font-size:1.05rem}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--ivory);font-family:Manrope,system-ui,sans-serif;line-height:1.6;padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--gold-hi);outline-offset:3px}
+
+header{position:sticky;top:0;z-index:5;background:rgba(13,13,16,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:58px;height:41px;object-fit:cover;border-radius:6px;border:1px solid var(--gold-lo)}
+.brand span{font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-size:1.25rem;letter-spacing:.02em;color:var(--gold-hi);line-height:1.1}
+nav{display:flex;gap:16px;flex-wrap:wrap;justify-content:flex-end}
+nav a{color:var(--silver);text-decoration:none;font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--gold-hi)}
+
+.hero{display:grid;gap:32px;align-items:center;padding:44px 0 8px;grid-template-columns:1fr}
+@media (min-width:820px){.hero{grid-template-columns:1.05fr .95fr;padding-top:64px}}
+.hero h1{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(2.2rem,6.4vw,3.6rem);line-height:1.05;margin:0 0 16px;font-weight:700;color:var(--ivory)}
+.hero p{margin:0 0 26px;color:var(--mute);font-size:1.05rem;max-width:32em}
+.hero .logo{width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--gold-lo);box-shadow:0 18px 50px rgba(0,0,0,.6)}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:800;text-decoration:none}
-.btn.main{background:var(--accent);color:#12263F}
-.btn.alt{border:2px solid #4A6182;color:#fff}
-.btn:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-section{padding:56px 0 0}
-h2{font-size:1.6rem;margin:0 0 20px}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
-.item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
-.item h3{margin:0 0 6px;font-size:1.05rem}
-.ico{width:44px;height:44px;margin-bottom:12px;color:var(--accent)}
-.item p{margin:0;color:var(--slate);font-size:.95rem}
-.contact{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:12px;padding:26px}
-.contact p{margin:0 0 10px}
-.contact a{color:inherit;font-weight:800}
-.photo{aspect-ratio:4/3;border:2px dashed var(--line);border-radius:10px;display:grid;place-items:center;color:var(--slate);margin-bottom:12px;font-size:.9rem;background:var(--paper)}
-img.photo{display:block;width:100%;height:auto;object-fit:contain;background:#fff;border:1px solid var(--line);border-style:solid}
-.small{padding:10px 16px;margin-top:14px;font-size:.95rem}
-.chat label{display:block;font-weight:600;margin:0 0 14px}
-.chat input,.chat textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:inherit;font:inherit;margin-top:4px}
-footer{padding:40px 0 28px;color:var(--slate);font-size:.9rem}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;font-weight:800;text-decoration:none;font-size:1rem;cursor:pointer;border:0;font-family:inherit}
+.btn.main{background:var(--grad);color:#1A1405}
+.btn.main:hover{filter:brightness(1.08)}
+.btn.alt{border:1.5px solid var(--silver);color:var(--ivory);background:transparent}
+.btn.alt:hover{border-color:var(--gold-hi);color:var(--gold-hi)}
+.small{padding:10px 20px;margin-top:14px;font-size:.95rem}
+
+section{padding:64px 0 0}
+h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:2rem;margin:0 0 6px;color:var(--gold-hi);font-weight:700}
+.lead{margin:0 0 24px;color:var(--mute)}
+.rule{height:2px;width:64px;background:var(--grad);border:0;margin:10px 0 24px}
+
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.item h3{margin:0 0 6px;font-size:1.05rem;color:var(--ivory)}
+.item p{margin:0;color:var(--mute);font-size:.95rem}
+.ico{width:44px;height:44px;margin-bottom:12px;color:var(--gold)}
+#produits .item{border-top:2px solid var(--gold-lo)}
+
+.photo{aspect-ratio:4/3;border:1px dashed var(--line);border-radius:10px;display:grid;place-items:center;color:var(--mute);margin-bottom:14px;font-size:.9rem;background:var(--char)}
+img.photo{display:block;width:100%;height:auto;object-fit:contain;background:#fff;border:1px solid var(--line)}
+#vitrine .item p{color:var(--gold-hi);font-weight:600}
+
+.panel{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:14px;padding:26px}
+.panel p{margin:0 0 10px}
+.panel a{color:var(--gold-hi);font-weight:800}
+.chat label{display:block;font-weight:600;margin:0 0 14px;color:var(--silver)}
+.chat input,.chat textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--black);color:var(--ivory);font:inherit;margin-top:4px}
+.chat input:focus,.chat textarea:focus{border-color:var(--gold)}
+
+footer{margin-top:64px;border-top:1px solid var(--line);padding:28px 0 36px;color:var(--mute);font-size:.9rem;text-align:center}
+footer strong{color:var(--gold-hi);font-family:"Cormorant Garamond",Georgia,serif;font-size:1.1rem}
 </style>
 </head>
 <body>
-<div class="wrap">
 <header>
-<a class="brand" href="#top" aria-label="RolandMugisho Company">
-<svg viewBox="0 0 64 64" role="img" aria-label="Logo RolandMugisho Company">
-<rect width="64" height="64" rx="14" fill="#12263F"/>
-<path d="M14 46V18h13a8 8 0 0 1 0 16H14m13 0 10 12" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M38 46V28l8 10 8-10v18" fill="none" stroke="#F2A33A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="54" cy="14" r="3.5" fill="#F2A33A"/>
-</svg>
-<span>RolandMugisho Company</span>
+<div class="wrap bar">
+<a class="brand" href="#top" aria-label="Mugisho Roland Company, accueil">
+<img src="logo-icon.jpg" alt="Logo MR">
+<span>Mugisho Roland<br>Company</span>
 </a>
-<nav><a href="#vitrine">Vitrine</a><a href="#chat">Discuter</a><a href="#contact">Contact</a></nav>
+<nav><a href="#produits">Produits</a><a href="#vitrine">Vitrine</a><a href="#chat">Discuter</a><a href="#contact">Contact</a></nav>
+</div>
 </header>
 
-<main id="top">
+<main id="top" class="wrap">
 <div class="hero">
+<div>
 <h1>Le matériel informatique qu’il vous faut, au bon endroit.</h1>
-<p>RolandMugisho Company vend des produits informatiques pour les particuliers, les écoles et les entreprises. Dites-nous votre besoin, nous vous conseillons.</p>
+<p>Mugisho Roland Company vend des produits informatiques pour les particuliers, les écoles et les entreprises. Dites-nous votre besoin, nous vous conseillons.</p>
 <div class="btns">
 <a class="btn main" href="https://wa.me/243978112663">Écrire sur WhatsApp</a>
 <a class="btn alt" href="tel:+243978112663">Appeler</a>
 </div>
 </div>
+<img class="logo" src="logo.jpg" alt="Logo Mugisho Roland Company : Ideas today, a brighter tomorrow">
+</div>
 
 <section id="produits">
 <h2>Nos produits</h2>
+<hr class="rule">
 <div class="grid">
 <div class="item"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5h14v10H5zM2 19h20"/></svg><h3>Ordinateurs</h3><p>Portables et ordinateurs de bureau pour le travail, les études et la maison.</p></div>
 <div class="item"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="5"/><path d="M12 3v6"/></svg><h3>Accessoires</h3><p>Claviers, souris, casques, câbles et sacoches.</p></div>
@@ -85,12 +111,14 @@ footer{padding:40px 0 28px;color:var(--slate);font-size:.9rem}
 
 <section id="vitrine">
 <h2>Vitrine</h2>
+<hr class="rule">
 <div class="grid" id="vitrine-grid"></div>
 </section>
 
 <section id="chat">
 <h2>Discuter avec nous</h2>
-<div class="contact chat">
+<hr class="rule">
+<div class="panel chat">
 <p>Écrivez votre message ici. Il s’ouvrira dans WhatsApp, prêt à être envoyé.</p>
 <label>Votre nom<input id="cn" type="text" autocomplete="name"></label>
 <label>Produit qui vous intéresse<input id="cp" type="text"></label>
@@ -101,15 +129,20 @@ footer{padding:40px 0 28px;color:var(--slate);font-size:.9rem}
 
 <section id="contact">
 <h2>Contact</h2>
-<div class="contact">
+<hr class="rule">
+<div class="panel">
 <p>Téléphone et WhatsApp : <a href="tel:+243978112663">+243 978 112 663</a></p>
 <p>E-mail : <a href="mailto:mugishocirimwamiroland@gmail.com">mugishocirimwamiroland@gmail.com</a></p>
 </div>
 </section>
 </main>
 
-<footer>© 2026 RolandMugisho Company. Vente de produits informatiques.</footer>
-</div>
+<footer>
+<strong>Mugisho Roland Company</strong><br>
+Ideas today • A brighter tomorrow<br>
+© 2026 Vente de produits informatiques
+</footer>
+
 <script>
 (function(){
 var n=document.getElementById('cn'),p=document.getElementById('cp'),m=document.getElementById('cm'),a=document.getElementById('send');
